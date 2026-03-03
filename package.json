@@ -1,0 +1,33 @@
+{
+  "name": "github-command-center",
+  "version": "2.0.0",
+  "description": "A powerful, self-hosted GitHub Desktop alternative — inline PRs, issues, workflows, and local git in one dark-themed app",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start-backend": "cd backend && go run main.go",
+    "build-backend": "cd backend && go build -o ../github-command-center",
+    "start": "npm run build && npm run start-backend",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.5.2",
+    "axios": "^1.6.2",
+    "react-feather": "^2.0.10"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/node": "^20.10.6",
+    "react-icons": "^5.0.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.16"
+  }
+}

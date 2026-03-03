@@ -1,0 +1,35 @@
+:root {
+  --color-github-50: #f6f8fa;
+  --color-github-100: #eaeef2;
+  --color-github-200: #d0d7de;
+  --color-github-300: #afb8c1;
+  --color-github-400: #6e7681;
+  --color-github-500: #57606a;
+  --color-github-600: #424a55;
+  --color-github-700: #32383f;
+  --color-github-800: #24292f;
+  --color-github-900: #0d1117;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-github-900);
+  color: #c9d1d9;
+}
